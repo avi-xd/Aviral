@@ -1,0 +1,7 @@
+---
+title:  "Projects"
+categories: Projects
+tags: Projects
+---
+
+This place is for my projects.

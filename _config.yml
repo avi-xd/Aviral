@@ -1,0 +1,42 @@
+# Site settings
+title: Aviral Verma
+description: 'Hi there! Welcome to my personal webpage.'
+url: ''
+baseurl: 'Avi_web'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+# disable_landing_page: true
+
+author:
+  name: 'Aviral Verma'
+  email: aviral.verma@niser.ac.in
+  github_username: avi-xd
+ #linkedin_username:  joshgerdes
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate','webrick','wdm','>= 0.1.0']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
