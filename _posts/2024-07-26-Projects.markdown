@@ -2,6 +2,222 @@
 title:  "Projects"
 categories: Projects
 tags: Projects
+date: 2024-12-15
+---
 ---
 
-This place is for my projects.
+<div class="collapsible">
+  <h5 class="collapsible-header">
+    <em>Reading Project on the topic "Electronic properties of Superconductors".</em>
+  </h5>
+  <div class="collapsible-content">
+    <ul style="font-size: 14px; font-family: 'Roboto', sans-serif;">
+      <li>
+        <strong><em>Supervisor: Dr. Paramita Dutta, PRL Ahmedabad.</em></strong>
+      </li>
+    </ul>
+    <p class="project">
+      This project involved studying the electronic and thermodynamic properties of superconductors. It served as a basic introduction to superconductor properties without relying on quantum mechanical descriptions. While superconductivity at its core is a quantum many-body phenomenon, an introductory understanding can be developed by exploring concepts such as the 'Meissner effect', 'London equations', the 'effect of magnetic field and temperature on superconductors', 'specific heat', 'types of superconductors', and others. You can found the report of the project <a href="https://drive.google.com/file/d/1pMugRofo2XBDe9_rp9F9bGhsqoxaKZc9/view?usp=sharing" target="_blank"> <span style="color: blue;">here</span>. </a>
+    </p>
+  </div>
+</div>
+---
+<div class="collapsible">
+  <h5 class="collapsible-header">
+    <em>Summer Internship on "Characterising High-Tc Superconductors".</em>
+  </h5>
+  <div class="collapsible-content">
+    <ul style="font-size: 14px; font-family: 'Roboto', sans-serif;">
+      <li>
+        <strong><em>Supervisor: Dr. Deepshikha Jaiswal Nagar, IISER TVM.</em></strong>
+      </li>
+    </ul>
+    <div class="project">
+    <p>
+      Started the internship with learning about the High-T<sub>c</sub> superconductors and what makes them different from conventional superconductors. Worked on YBCO-123 (Yttrium Barium Copper Oxide) and BSCCO-2212 single crystals (a class of high-T<sub>c</sub> superconductors called as cuprate superconductors) and studied about their structure and properties. Learned about different techniques that are used in growing a crystal like Self-Flux method and Floating zone method and used them to grow the single crystal of YBCO and BSCCO superconductor. </p>
+      <div class = "image-container">
+      <img src="{{ site.baseurl }}/images/YBCO_crystal.jpg" alt="High-Tc Superconductor Image" style= "width:5cm; Height:4cm"> 
+      <div class = "caption"> YBCO single crystal grown using self-flux method under a microscope.</div>
+      <br>
+      <p>
+      <!-- <summary> -->
+      Also learned about the experimental techniques like EDAX, powder and single crystal XRD, TEM, SEM and Raman spectroscopy. Worked on retieveld refinement analysis of the BSCCO PXRD data using the FULLPROF software. The primary purpose of Rietveld refinement is to determine the crystal structure and accurately quantify the atomic positions, lattice parameters, and other structural parameters of crystalline material. Rietveld refinement is invaluable in phase identification and quantification in complex mixtures or multiphase materials and in determining the miller indices. It can distinguish between different phases present in a sample and determine their relative proportions. I also had worked on setting and callibrating a high pressure chamber than can be used to produce the highly oxygen doped cuprate superconductors.
+    </p>
+    </div>
+    </div>
+  </div>
+</div>
+---
+
+<div class="collapsible">
+  <h5 class="collapsible-header">
+    <em>Semester Project on "Machine Learning Based Digital Holographic Microscopy". (Online)</em>
+  </h5>
+  <div class="collapsible-content">
+    <ul style="font-size: 14px; font-family: 'Roboto', sans-serif;">
+      <li>
+        <strong><em>Supervisor: Dr. Falko Schmidt, ETH Zurich.  </em></strong>
+      </li>
+    </ul>
+    <div class="project">
+    <p>
+      Holography is a technique used to capture the properties of an object in 3D, providing spatial depth, detailed volumetric information, and the ability to analyze dynamic processes, all of which are not possible with traditional 2D imaging methods. On the other hand, a lab-on-a-chip is a device designed to replicate the functionality of a laboratory, performing a variety of reactions on a miniature scale. However, mixing reactants on such a small scale poses significant challenges due to limitations in fluid dynamics, such as low Reynolds numbers that inhibit turbulence, and reaction kinetics that require precise control over diffusion. These difficulties often necessitate specialized equipment like pressure syringes to achieve efficient mixing. To address this issue, researchers have been exploring innovative solutions, including the use of light to control the dynamics of particles.</p>
+      <p>
+      One such approach involves utilizing gold nanorods (AuNRs) at the bottom of a lab-on-a-chip. By shining light on these AuNRs, plasmon resonance—a phenomenon where conduction electrons on the metal surface oscillate in resonance with incident light—is induced, allowing localized temperature control around the nanorods. Holography is then employed to image these systems, providing detailed 3D information about particle positions over time. By reconstructing velocity profiles of particles at different temperatures, holography enables researchers to understand and manipulate particle dynamics with precision. This is critical for controlling movement, as it allows for the fine-tuning of conditions that drive specific reactions or processes within the lab-on-a-chip system.</p>
+      <p>
+      The process of tracking particles and analyzing velocity profiles from holographic data, however, is both computationally intensive and labor-intensive. To streamline this process, machine learning models can be employed to trace particle positions directly from holographic data. In our work, we utilized U-Net, a supervised model widely used in bioimaging applications, and LodeSTAR, a label-free, self-supervised model implemented through the DeepTrack framework, to track particles in 3D using off-axis holographic data.</p>
+      <p>
+      LodeSTAR showed good tracking performance in the x and y axes, achieving sub-pixel accuracy, as validated by comparing its results to ground truth data from numerical simulations. However, when compared with numerically derived data, the z-axis results exhibited occasional sudden jumps, indicating room for further refinement. </p>
+      
+
+
+
+
+       <!-- Hologrpahy is used to capture the properties of an object in 3D, in comparison with 2D imaging. Lab-on-a-chip is a device used to replicate the environmet of a lab, but doing all kinds of reactions just on a chip, but it turns out it is quite hard to do mixing of reactants on such a small scale. On needs  pressure syringes and other equipments to do such thing. Hence, researchers had been developing a way to overcome this issue. One such way is to use light to control the dynamics of particles. Using gold nanorods on the bottom of lab-on-chip and shining light on it creates a plasmon resosnace which can be used to control the temperture locally around the AuNRs. Hologrpahy is used to image such systems and analyse the velocity profile of the particles and thus at different temperatures can be used to control the movement. The process of tracking particles and analysing to get a velocity profile from the holographic is computationally and manual labour expensive. To overcome this, and the whole post-processing of holographic data can be made better by using machine learning models to trace the positions of particles just from the holograhic data. We used models like U-Net, a supervised model that used mostly in bioimaging applications and LodeSTAR, a label-free self-supervised model, using the deeptrack framework to track particles in 3D using off-axis holograpic data. LODESTAR showed great results of tracking in x,y axes but there were some sudden jumps in the result of z-axis, when compared with the numercially found data.  -->
+  </div>
+  </div>
+</div>
+---
+
+<!-- <h2 style="font-size:40px;font-weight:400;">Academic Projects</h2> -->
+
+# Course Projects
+---
+
+<div class="collapsible">
+  <h5 class="collapsible-header">
+    <em>P346:Computational physics -  "Quantum Hello World using CIRQ".</em>
+  </h5>
+  <div class="collapsible-content">
+    <ul style="font-size: 14px; font-family: 'Roboto', sans-serif;">
+      <li>
+        <strong><em>Supervisor: Dr. Colin Bnejamin, NISER.</em></strong>
+      </li>
+    </ul>
+    <p class="project">
+      This project was done in the computational physics coursework, in which I provided an introduction about the Quantum computing, entanglement and superpositon and how to implement basic quantum circuits using <a href="https://quantumai.google/cirq" target="_blank"> <span style="color: blue;">CIRQ</span>. </a> We discussed the bipartite and tripartite systems and have talked about their seprability. We implemented the famous states like GHZ and W states using CIRQ. <a href="https://drive.google.com/file/d/1fNBWRpC5G1zfmF2gHQFcL94bk6ZLpKQR/view?usp=sharing" target="_blank"> <span style="color: blue;">Report</span>. </a>
+    </p>
+  </div>
+</div>
+
+---
+
+<div class="collapsible">
+  <h5 class="collapsible-header">
+    <em>P460:Many-Body physics -  "Scattering from external potential".</em>
+  </h5>
+  <div class="collapsible-content">
+    <ul style="font-size: 14px; font-family: 'Roboto', sans-serif;">
+      <li>
+        <strong><em>Supervisor: Dr. Anamitra Mukherjee, NISER.</em></strong>
+      </li>
+    </ul>
+    <div class="project">
+    <p>
+    What happens when you introduce random impurities in a metal? How do electrons behave or move in the system? How does their behavior change compared to the free electron state? In this project, we studied this problem of "Random Impurities in Disordered Metals". We initially approached this problem using the equation of motion for Green's functions in momentum space, inspired by the solution to the famous Anderson impurity problem, which involves a single impurity outside a bath. However, for our system, momentum is not a good quantum number because the randomly placed impurities breaks the translational symmetry of the system, making momentum non-conserved and hence not an invariant quantity. Consequently, this approach led to a recursive solution, beyond which further progress was not possible. To address this limitation, we introduced the Matsubara Green's functions.</p>
+    <p>
+    Matsubara Green's functions, also known as imaginary Green's functions, are defined in imaginary time. This transition from real time to imaginary time allows the expansion of the density matrix in the interaction picture, which involves calculations by transforming oscillatory terms into exponentially decaying ones, helps in exploration of the thermodynamic quantities. We introduced the Matsubara Green's functions, their mathematical structure, and key properties. To make the system momentum invariant, we defined the impurity self-average and proceeded to establish the Feynman rules and diagrams. These diagrammatic methods simplify solving such problems by providing a structured framework for visualizing and computing interactions. They allow the systematic identification and summation of specific classes of diagrams, such as crossing diagrams, which are crucial for understanding phenomena like weak localization and electron scattering.</p>
+    <p>
+    We discussed the concept of self-energy and the reducibility of Feynman diagrams, along with different Born approximations, which involve selecting specific interaction pathways within the system. Additionally, we briefly explored how choosing particular diagrams can lead to weak localization of electrons. This phenomenon is demonstrated through interference effects in the electron's wave function due to scattering from impurities, resulting in a reduced probability of diffusion, highlighting the transition from metallic to insulating behavior as disorder increases. Report can be found <a href="https://drive.google.com/file/d/1g7cuxiMcoggpV15vcSAv6YYUNp70PYPT/view?usp=sharing" target="_blank"> <span style="color: blue;">here</span>. </a></p>
+    
+    
+    
+       <!-- What happens when you introduce random impurities in a metal? How electrons behave or move in the system? What are the changes in the behaviour compared to a free electron state? In this project we have studied this problem of "Random Impurities in Disordered metals". We tried to solve the problem with Equation of motion of Greens function in momentum space (inspired from the solution of famous Anderson impurity problem with one impurity outside the bath), but for this problem, momentum is not a good quantum number as it is not a invariant quantity for the system, and hence we got a recursive solution and we cannot go further. To solve this problem, we need the help matsubara greens function. Matsubara greens function are also called as imaginary greens fucntion and we go from real time to imaginary time inorder to expand the density matrix term in interaction picture.<l></l> We introduced the matsubara GFs, their properties and mathematical structure. To solve the problem, we defined the impurity self-average to make the system momentum invariant, and thus defined the Feynman rules and diagrams as the diagramatic approach makes it easier to solve such problems. We also discussed the concept of self energy and reducibility of feynman diagrams. We explained about the different Born approximations which just include selecting different ways how interaction happens in the system. We then also in brief explained about how choosing a specific diagram makes the electrons weakily localize.  -->
+  
+  </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var headers = document.querySelectorAll(".collapsible-header");
+    headers.forEach(function(header) {
+      header.addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        var marker = this.querySelector(".marker");
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          marker.textContent = "[-]";
+        } else {
+          content.style.display = "none";
+          marker.textContent = "[+]";
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .collapsible-content {
+    display: none;
+  }
+  .collapsible-header {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight:100;
+    font-family: 'Times New Roman', sans-serif;
+  }
+  .marker {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  .image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .image-container img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  .responsive-image {
+    width: 50%; /* Expand the width */
+    max-width: 100px; Ensure it does not exceed a certain width
+    height: auto; /* Maintain aspect ratio */
+  }
+  .caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+  .project-description {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+  /* 'Times New Roman', sans-serif; */
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #333;
+}
+</style>

@@ -1,7 +1,0 @@
----
-title:  "Comics"
-categories: comics
-tags: Funny
----
-
-I will post some of my favourite picture comics here, mostly related to academia.
