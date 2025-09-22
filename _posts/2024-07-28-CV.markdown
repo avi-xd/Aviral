@@ -1,7 +1,0 @@
----
-title:  "CV"
-categories: CV
-tags: Acad details
----
-
-CV will be added Here. 

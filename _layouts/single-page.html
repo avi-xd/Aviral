@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.name }}">
+    {% if page.url == "/404.html" %}
+        <meta http-equiv="refresh" content="5; url=/">
+    {% endif %}
+    {% if page.keywords %}
+        <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    {% if page.canonical %}
+        <link rel="canonical" href="{{ page.canonical }}"/>
+    {% endif %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/images/favicons/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/images/favicons/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/images/favicons/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" href="{{ "/images/favicons/apple-touch-icon.png" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ "/images/favicons/favicon.ico" | prepend: site.baseurl }}">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="fixed-nav">
+        <div class="nav-container">
+            <h1 class="nav-title">{{ site.name }}</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">{{ site.author.name }}</h1>
+                        <p class="hero-subtitle">{{ site.description }}</p>
+                        
+                        <div class="social-links">
+                            {% for social in site.social %}
+                                <a href="{{ social.url }}" target="_blank" rel="noopener">{{ social.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        {% if site.author.image %}
+                        <img src="{{ site.author.image | prepend: site.baseurl }}" alt="{{ site.author.name }}" class="profile-image">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="section-content">
+                    <p>Hi, I am Aviral Verma, currently pursuing an Integrated Master's (B.S + M.S) degree in Physics from National Institute of Science Education and Research (NISER), Bhubaneshwar, India. I am currently in my 4th Year (8th Sem) of degree.</p>
+                    
+                    <p>I'm fascinated by the intersection of physics and computation, exploring how fundamental principles manifest in complex systems. My work sits at the boundary between theoretical understanding and practical application.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <div class="container">
+                <h2 class="section-title">Research Interest</h2>
+                <div class="section-content">
+                    <p>I am currently exploring my research interests, with a primary focus on the dynamical/emergent phenomena of quantum many-body systems and in transport properties of quantum materials. I am fascinated by how collective behaviors arise from the interactions of individual particles, leading to unexpected properties that cannot be understood by examining the components in isolation.</p>
+                    
+                    <p>I am interested in learning about the different analytical and numerical techniques used to study the behaviour of such systems. Alongside this, I am also interested in quantum computation and information, especially their intersection with many-body physics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-showcase">
+                    
+                    <!-- Project Filters -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="research">Research</button>
+                        <button class="filter-btn" data-filter="course">Course Work</button>
+                        <button class="filter-btn" data-filter="personal">Personal</button>
+                    </div>
+
+                    <!-- Projects Grid -->
+                    <div class="projects-grid">
+
+                        <!-- Research Projects (Timeline order: newest first) -->
+                        
+                        <!-- Research Project 1 - HoVHS -->
+                        <div class="project-card" data-category="research" onclick="window.location.href='{{ "/projects/hovhs/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Higher Order van Hove Singularities</h3>
+                                <p class="project-card-meta">Reading Internship • Shiv Nadar Institute</p>
+                                <p class="project-card-excerpt">
+                                    Studying higher order van Hove singularities and their connection to flat bands in condensed matter systems.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">van Hove Singularities</span>
+                                    <span class="project-tag-minimal">Flat Bands</span>
+                                    <span class="project-tag-minimal">Theory</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Higher Order van Hove Singularities</h3>
+                                    <p class="project-overlay-description">
+                                        Remote reading internship focused on higher order van Hove singularities and their connection to flat bands. Presented annual review at Dr. Ipsita's research group.
+                                    </p>
+                                    <p class="project-overlay-tech">Condensed Matter Theory • Flat Bands • van Hove Singularities</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Research Project 2 - Magnon Visualisation -->
+                        <div class="project-card" data-category="research" onclick="window.location.href='{{ "/projects/magnon-visualisation-system/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Magnon Visualisation system</h3>
+                                <p class="project-card-meta">Summer Internship • SNBNCBS Kolkata</p>
+                                <p class="project-card-excerpt">
+                                  Worked on developing a software to analyze and visualize magnons. 
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Magnons</span>
+                                    <span class="project-tag-minimal">LSWT</span>
+                                    <span class="project-tag-minimal">Software Development</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Magnon Visualisation System</h3>
+                                    <p class="project-overlay-description">
+                                        Worked on developing a software using VISPY and QtPy5 to analyze and visualize magnons on different kinds of lattice systems in 3D visuals based on generalised linear spin wave theory.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <span class="project-overlay-link"> Magnons</span>
+                                        <span class="project-overlay-link"> Many body theory</span>
+                                    </div>
+                                    <p class="project-overlay-tech">Many body theory • Heisenberg interaction • Dzyaloshinskii - Moriya interaction</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Research Project 3 - High-Tc Superconductors -->
+                        <div class="project-card" data-category="research" onclick="window.location.href='{{ "/projects/high-tc-superconductors/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Characterising High-Tc Superconductors</h3>
+                                <p class="project-card-meta">Summer Internship • IISER TVM</p>
+                                <p class="project-card-excerpt">
+                                    Worked on YBCO-123 and BSCCO-2212 single crystals, studying their structure and properties using advanced characterization techniques.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Superconductors</span>
+                                    <span class="project-tag-minimal">Crystal Growth</span>
+                                    <span class="project-tag-minimal">XRD</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">High-Tc Superconductor Characterisation</h3>
+                                    <p class="project-overlay-description">
+                                        Comprehensive study of cuprate superconductors including YBCO and BSCCO single crystals. Used self-flux and floating zone methods for crystal growth. Performed structural characterization using EDAX, powder/single crystal XRD, TEM, SEM, and Raman spectroscopy.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <span class="project-overlay-link"> Crystal Growth</span>
+                                        <span class="project-overlay-link"> XRD Analysis</span>
+                                    </div>
+                                    <p class="project-overlay-tech">Self-Flux Growth • Floating Zone • XRD • SEM • TEM • FULLPROF</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Research Project 4 - ML Holographic -->
+                        <div class="project-card" data-category="research" onclick="window.location.href='{{ "/projects/ml-holographic-microscopy/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">ML-Based Digital Holographic Microscopy</h3>
+                                <p class="project-card-meta">Semester Project • ETH Zurich (Online)</p>
+                                <p class="project-card-excerpt">
+                                    Applied machine learning to track particles in 3D using holographic data for lab-on-chip applications with gold nanorods and thermal control.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Machine Learning</span>
+                                    <span class="project-tag-minimal">Holography</span>
+                                    <span class="project-tag-minimal">U-Net</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">ML-Based Digital Holographic Microscopy</h3>
+                                    <p class="project-overlay-description">
+                                        Developed machine learning solutions for 3D particle tracking in holographic microscopy. Used U-Net and LodeSTAR models to analyze off-axis holographic data from lab-on-chip systems with gold nanorods.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <span class="project-overlay-link"> ML Models</span>
+                                        <span class="project-overlay-link"> Holography Data</span>
+                                        <span class="project-overlay-link">Results Analysis</span>
+                                    </div>
+                                    <p class="project-overlay-tech">U-Net • LodeSTAR • DeepTrack • Python • Holography</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Research Project 5 - Electronic Properties -->
+                        <div class="project-card" data-category="research" onclick="window.location.href='{{ "/projects/electronic-properties-superconductors/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Electronic Properties of Superconductors</h3>
+                                <p class="project-card-meta">Reading Project • PRL Ahmedabad</p>
+                                <p class="project-card-excerpt">
+                                    Comprehensive study of electronic and thermodynamic properties of superconductors, focusing on fundamental concepts without quantum mechanical complexity.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Superconductivity</span>
+                                    <span class="project-tag-minimal">Theory</span>
+                                    <span class="project-tag-minimal">Thermodynamics</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Electronic Properties of Superconductors</h3>
+                                    <p class="project-overlay-description">
+                                        Studied fundamental superconductor properties including Meissner effect, London equations, effects of magnetic field and temperature, specific heat, and classification of superconductor types.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <span class="project-overlay-link">📋 Project Report</span>
+                                    </div>
+                                    <p class="project-overlay-tech">Theoretical Analysis • Literature Review • Scientific Writing</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Projects (Timeline order: newest first) -->
+
+                        <!-- Course Project 1 - Ising Model -->
+                        <div class="project-card" data-category="course" onclick="window.location.href='{{ "/projects/ising-model/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Physics of Small World Network - Ising Model</h3>
+                                <p class="project-card-meta">Course Project • P468 Magnetism</p>
+                                <p class="project-card-excerpt">
+                                    Small world network and phase transition in 1D Ising model using random long range interactions.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Ising Model</span>
+                                    <span class="project-tag-minimal">Phase Transitions</span>
+                                    <span class="project-tag-minimal">Networks</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Small World Network Ising Model</h3>
+                                    <p class="project-overlay-description">
+                                        Investigation of phase transitions in 1D Ising model with random long-range interactions using small world network topology.
+                                    </p>
+                                    <p class="project-overlay-tech">Statistical Mechanics • Phase Transitions • Network Theory</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Project 2 - Mesoscopic -->
+                        <div class="project-card" data-category="course" onclick="window.location.href='{{ "/projects/mesoscopic/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Intrinsic Nonmagnetic φ₀ Josephson Junctions</h3>
+                                <p class="project-card-meta">Course Project • P461 Mesoscopic Systems</p>
+                                <p class="project-card-excerpt">
+                                    Study of MATBG and how to break symmetries to build Josephson junctions in twisted bilayer graphene.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Josephson Junctions</span>
+                                    <span class="project-tag-minimal">MATBG</span>
+                                    <span class="project-tag-minimal">Symmetry Breaking</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">φ₀ Josephson Junctions in Twisted Bilayer Graphene</h3>
+                                    <p class="project-overlay-description">
+                                        Investigation of intrinsic nonmagnetic φ₀ Josephson junctions in magic-angle twisted bilayer graphene (MATBG) and symmetry breaking mechanisms.
+                                    </p>
+                                    <p class="project-overlay-tech">Mesoscopic Physics • Twisted Bilayer Graphene • Josephson Effect</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Project 3 - Scattering -->
+                        <div class="project-card" data-category="course" onclick="window.location.href='{{ "/projects/scattering-external-potential/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Scattering from External Potential</h3>
+                                <p class="project-card-meta">Many-Body Physics • P460</p>
+                                <p class="project-card-excerpt">
+                                    Studied random impurities in disordered metals using Matsubara Green's functions and Feynman diagrams to understand electron scattering and weak localization.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Many-Body</span>
+                                    <span class="project-tag-minimal">Green's Functions</span>
+                                    <span class="project-tag-minimal">Disorder</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Scattering from External Potential</h3>
+                                    <p class="project-overlay-description">
+                                        Investigated electron behavior in metals with random impurities. Developed understanding of Matsubara Green's functions, Feynman diagrams, and self-energy concepts. Explored Born approximations and weak localization phenomena.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <span class="project-overlay-link">📄 Project Report</span>
+                                    </div>
+                                    <p class="project-overlay-tech"> Many-Body Theory</p>
+                                    <p class="click-hint">Click to read full project details →</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Project 4 - Quantum Computing -->
+                        <div class="project-card" data-category="course" onclick="window.location.href='{{ "/projects/quantum-computing-cirq/" | prepend: site.baseurl }}'">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Quantum Hello World using CIRQ</h3>
+                                <p class="project-card-meta">Computational Physics • P346</p>
+                                <p class="project-card-excerpt">
+                                    Introduction to quantum computing concepts, implementing basic quantum circuits and famous quantum states using Google's CIRQ framework.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Quantum Computing</span>
+                                    <span class="project-tag-minimal">CIRQ</span>
+                                    <span class="project-tag-minimal">Python</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Quantum Computing with CIRQ</h3>
+                                    <p class="project-overlay-description">
+                                        Comprehensive introduction to quantum computing fundamentals including entanglement, superposition, and quantum circuit implementation. Studied bipartite and tripartite systems, separability concepts. Successfully implemented famous quantum states including GHZ and W states using Google's CIRQ quantum computing framework.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <a href="https://drive.google.com/file/d/1fNBWRpC5G1zfmF2gHQFcL94bk6ZLpKQR/view?usp=sharing" class="project-overlay-link">→ Project Report</a>
+                                        <a href="#" class="project-overlay-link">→ CIRQ Code</a>
+                                        <a href="#" class="project-overlay-link">→ Quantum Circuits</a>
+                                    </div>
+                                    <p class="project-overlay-tech">CIRQ • Entanglement</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Project 1 -->
+                        <!-- <div class="project-card" data-category="personal">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Academic Website Development</h3>
+                                <p class="project-card-meta">Personal Project • 2024</p>
+                                <p class="project-card-excerpt">
+                                    Built a personal academic website showcasing research interests, projects, and publications with modern web technologies.
+                                </p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag-minimal">Jekyll</span>
+                                    <span class="project-tag-minimal">Web Design</span>
+                                    <span class="project-tag-minimal">Portfolio</span>
+                                </div>
+                            </div>
+                            <div class="project-card-overlay">
+                                <div class="project-overlay-content">
+                                    <h3 class="project-overlay-title">Academic Website Development</h3>
+                                    <p class="project-overlay-description">
+                                        Designed and developed a comprehensive academic portfolio website using Jekyll and modern web technologies. Features responsive design, project showcases, research highlights, and professional presentation of academic work. Implemented Frank Chimero-inspired typography-focused design principles.
+                                    </p>
+                                    <div class="project-overlay-links">
+                                        <a href="#" class="project-overlay-link">→ Live Website</a>
+                                        <a href="#" class="project-overlay-link">→ Source Code</a>
+                                        <a href="#" class="project-overlay-link">→ Design Process</a>
+                                    </div>
+                                    <p class="project-overlay-tech">Jekyll • HTML5 • CSS3 • JavaScript • Responsive Design</p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Section -->
+        <section id="writing" class="section">
+            <div class="container">
+                <h2 class="section-title">Writing</h2>
+                <div class="section-content">
+                    <div class="writing-placeholder">
+                        <p class="placeholder-text">Blog posts and articles coming soon...</p>
+                        <p class="placeholder-subtitle">This space will feature thoughts on physics, research insights, and academic reflections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-content">
+                    <p>Feel free to reach out if you'd like to discuss research, collaborate on projects, or just have a conversation about physics and computation.</p>
+                    
+                    <div class="contact-links">
+                        <p><strong>Email:</strong> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+                        
+                        <div class="social-contact">
+                            {% for social in site.social %}
+                                <a href="{{ social.url }}" target="_blank" rel="noopener">{{ social.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for smooth scrolling and project functionality -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple navigation highlight on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            card.classList.remove('hidden');
+                            card.style.animation = 'fadeIn 0.3s ease';
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Add hover effect enhancement for project cards
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

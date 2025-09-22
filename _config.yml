@@ -3,40 +3,59 @@ title: Aviral Verma
 description: 'Hi there! Welcome to my personal webpage.'
 url: "http://127.0.0.1:4000"
 baseurl: "/Avi_web"
-# google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
-# disable_landing_page: true
 
 author:
   name: 'Aviral Verma'
   email: aviral.verma@niser.ac.in
   github_username: avi-xd
- #linkedin_username:  joshgerdes
+  image: '/images/profile.jpg'
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Default layouts
 defaults:
   -
     scope:
       path: ''
-      type: 'posts'
+      type: 'projects'
     values:
-        layout: 'post'
+        layout: 'project'
+
+# Social links
+social:
+  - title: "Email"
+    url: "mailto:aviral.verma@niser.ac.in"
+  - title: "GitHub"  
+    url: "https://github.com/avi-xd"
+  - title: "LinkedIn"
+    url: "#"
 
 # Build settings
 destination: _site
-paginate: 10
-permalink: /:year/:title/
 markdown: kramdown
 highlighter: rouge
 
-sass:
-    sass_dir: _sass
-    style: compressed
-
+# Kramdown settings
 kramdown:
-  # use Github Flavored Markdown
   input: GFM
-  # do not replace newlines by <br>s
+  syntax_highlighter: rouge
   hard_wrap: false
 
-plugins: ['jekyll-paginate','webrick','wdm','>= 0.1.0']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from build
+exclude: 
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .git/
+  - .github/
