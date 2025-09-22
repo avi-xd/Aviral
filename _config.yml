@@ -1,8 +1,8 @@
 # Site settings
 title: Aviral Verma
 description: 'Hi there! Welcome to my personal webpage.'
-url: "http://127.0.0.1:4000"
-baseurl: "/Avi_web"
+url: "https://avi-xd.github.io"
+baseurl: "/Aviral"
 
 author:
   name: 'Aviral Verma'
@@ -18,6 +18,12 @@ collections:
 
 # Default layouts
 defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single-page"
   -
     scope:
       path: ''
