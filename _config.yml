@@ -37,8 +37,6 @@ social:
     url: "mailto:aviral.verma@niser.ac.in"
   - title: "GitHub"  
     url: "https://github.com/avi-xd"
-  - title: "LinkedIn"
-    url: "#"
 
 # Build settings
 destination: _site
