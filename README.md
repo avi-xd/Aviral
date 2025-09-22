@@ -1,10 +1,7 @@
-# Aviral Verma - Academic Portfolio Website
 
-A clean, minimal academic portfolio website showcasing research projects and academic work. Built with Jekyll and inspired by Frank Chimero's elegant typography-focused design principles.
+A clean, minimal website showcasing research projects and academic work. Built with Jekyll and inspired by Frank Chimero's elegant typography-focused design principles.
 
-![Profile](./images/profile.jpg)
-
-## 🎨 Design Philosophy
+## Design Philosophy
 
 This website follows a **Frank Chimero-inspired design** with:
 - **Typography-focused layout** with generous whitespace
@@ -14,13 +11,6 @@ This website follows a **Frank Chimero-inspired design** with:
 
 > **Design Inspiration**: [frankchimero.com](https://frankchimero.com/) - A masterclass in web typography and layout design
 
-## ✨ Features
-
-- **📱 Fully Responsive**: Works seamlessly on all devices
-- **🔬 Project Showcase**: Interactive grid with hover overlays
-- **🎨 Modern Design**: Frank Chimero-inspired layout with sticky navigation
-
-## Quick Start
 
 ### Prerequisites
 - Ruby (3.0+)
@@ -57,7 +47,7 @@ This website follows a **Frank Chimero-inspired design** with:
 📦 Aviral_single_page/
 ├── 📄 _config.yml          # Site configuration
 ├── 📄 index.html           # Main single-page layout
-├── 🎨 css/main.scss        # Custom styles (Frank Chimero-inspired)
+├──  css/main.scss        # Custom styles (Frank Chimero-inspired)
 ├── 📂 _layouts/
 │   ├── 📄 project.html     # Individual project page template
 │   └── 📄 single-page.html # Main site layout
@@ -74,7 +64,7 @@ This website follows a **Frank Chimero-inspired design** with:
 └── 📂 images/              # Profile and project images
 ```
 
-## 🎯 Customization
+##  Customization
 
 ### Adding New Projects
 
@@ -109,7 +99,7 @@ social:
     url: "https://github.com/yourusername"
 ```
 
-## 🛠️ Technologies Used
+## Dependencies
 
 - **[Jekyll 4.4+](https://jekyllrb.com/)** - Static site generator
 - **[MathJax](https://www.mathjax.org/)** - Mathematical notation rendering
@@ -117,21 +107,6 @@ social:
 - **Flexbox & CSS Grid** - Responsive layout system
 - **SCSS** - Enhanced CSS with variables and nesting
 
-## 📊 Academic Features
-
-### LaTeX Math Support
-```latex
-$$\mathbf{J} = -\frac{n_s e^2}{m} \mathbf{A}$$
-```
-
-### Project Categories
-- **Research Projects**: Summer internships, research work
-- **Course Projects**: Academic coursework and assignments
-- **Personal Projects**: Independent work and contributions
-
-### Responsive Design
-- **Desktop**: Side-by-side layout with sticky navigation
-- **Mobile**: Single-column stacked layout for optimal mobile experience
 
 ## 🎨 Design Credits
 
@@ -141,16 +116,13 @@ This website's design is inspired by **[Frank Chimero](https://frankchimero.com/
 - Minimal, content-first design philosophy
 - Elegant use of whitespace and hierarchy
 
-Frank Chimero's work demonstrates how thoughtful design enhances content readability and user experience.
-
-## 📧 Contact
+## Contact
 
 **Aviral Verma**
-- 📧 Email: [aviral.verma@niser.ac.in](mailto:aviral.verma@niser.ac.in)
-- 🐙 GitHub: [@avi-xd](https://github.com/avi-xd)
-- 🎓 Institution: NISER Bhubaneswar
+-  Email: [aviral.verma@niser.ac.in](mailto:aviral.verma@niser.ac.in)
+-  GitHub: [@avi-xd](https://github.com/avi-xd)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
