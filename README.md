@@ -3,13 +3,9 @@ A clean, minimal website showcasing research projects and academic work. Built w
 
 ## Design Philosophy
 
-This website follows a **Frank Chimero-inspired design** with:
-- **Typography-focused layout** with generous whitespace
-- **Sticky section navigation** - section headings remain visible while content scrolls
-- **Side-by-side layout** - content flows naturally while maintaining visual hierarchy
-- **Minimal, clean aesthetic** prioritizing readability and content
+This website follows a **Frank Chimero-inspired design**:
 
-> **Design Inspiration**: [frankchimero.com](https://frankchimero.com/) - A masterclass in web typography and layout design
+> **Design Inspiration**: [frankchimero.com](https://frankchimero.com/)
 
 
 ### Prerequisites
@@ -106,15 +102,6 @@ social:
 - **HTML5 & CSS3** - Modern web standards
 - **Flexbox & CSS Grid** - Responsive layout system
 - **SCSS** - Enhanced CSS with variables and nesting
-
-
-## 🎨 Design Credits
-
-This website's design is inspired by **[Frank Chimero](https://frankchimero.com/)**, particularly:
-- Typography-focused layout principles
-- Sticky section navigation pattern
-- Minimal, content-first design philosophy
-- Elegant use of whitespace and hierarchy
 
 ## Contact
 
