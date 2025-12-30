@@ -64,7 +64,7 @@ To visualize the spatial distribution of a magnon mode, the software renders a s
 
 ### 4. Topological Edge States
 
-One of the critical capabilities of the real-space solver is identifying **Topological Edge States**—modes where energy is localized entirely at the boundaries of the material.
+One of the critical capabilities of the real-space solver is identifying **Topological Edge States** modes where energy is localized entirely at the boundaries of the material.
 
 <div align="center">
   <img src="{{ site.baseurl }}/images/Screenshot from 2025-12-29 02-53-04.jpg" width="90%" style="border-radius: 8px; margin-bottom: 15px;" />
@@ -78,14 +78,14 @@ One of the critical capabilities of the real-space solver is identifying **Topol
 
 ---
 
-### 5. GPU-Accelerated Dynamics
+### 5. GPU-Accelerated using VisPy
 
 <div align="center">
   <img src="{{ site.baseurl }}/images/24.jpg" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
   <p><em>Figure 6: The Live Visualizer (drawn using command line interface instead of GUI) showing spin vectors (cones) and lattice connectivity.</em></p>
 </div>
 
-For the visualization engine, standard plotting libraries were insufficient for the required frame rates. I utilized **VisPy**, which leverages OpenGL to render thousands of spin vectors and bonds directly on the GPU.
+
 
 ---
 
